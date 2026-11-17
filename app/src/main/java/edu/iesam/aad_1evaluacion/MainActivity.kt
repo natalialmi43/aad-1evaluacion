@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         getById()
         getAll()
         upDate()
+        getOwnerDetails()
     }
 
 
@@ -77,6 +78,12 @@ class MainActivity : AppCompatActivity() {
     fun upDate(){
         xml.update(mockkCar)
         Log.d(TAG, "The list of car updating are: " + xml.getAll().toString())
+
+    }
+
+    fun getOwnerDetails(){
+        xml.getOwnerDetail("789B")
+        Log.d(TAG, "The owner of tuition 789B is: " + xml.getOwnerDetail("789B").toString())
 
     }
 
